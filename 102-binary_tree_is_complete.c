@@ -2,12 +2,15 @@
 
 int binary_tree_is_complete(const binary_tree_t *tree)
 {
-	size_t size;	
+	size_t size;
+	int check;
 
 	if (!tree)
 		return (0);
 	size = binary_tree_size(tree);
-	return (is_complete(tree, 0, size));
+	check = is_complete(tree, 0, size);
+
+	return (check);
 }
 
 int is_complete(const binary_tree_t *tree, size_t i, size_t nodes_size)
