@@ -36,7 +36,15 @@ size_t binary_tree_height(const binary_tree_t *tree)
 	return ((l_height > r_height) ? l_height + 1 : r_height + 1);
 }
 
-void binary_tree_level(const binary_tree_t *tree, void (*func)(int), size_t l_no)
+/**
+ * binary_tree_level - traverses the tree level by level.
+ *
+ * @tree: the pointer to the root node to be traversed.
+ * @func: the function to be called on each node.
+ * @l_no: the level number.
+ */
+void binary_tree_level(const binary_tree_t *tree, void (*func)(int),
+	size_t l_no)
 {
 	if (l_no == 0)
 		func(tree->n);
