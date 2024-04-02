@@ -64,6 +64,6 @@ int binary_tree_is_complete(const binary_tree_t *tree);
 
 /*Help function*/
 void binary_tree_level(const binary_tree_t *tree, void (*func)(int), size_t l_no);
-int btic_helper(const binary_tree_t *tree, size_t index, size_t size)
+int is_complete(const binary_tree_t *tree, size_t index, size_t size)
 
 #endif /* _BINARY_TREES_H_ */
